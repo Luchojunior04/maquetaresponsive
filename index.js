@@ -74,3 +74,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	articuloPrincipal();
 });
+
+const menuButton = document.getElementById("menu")
+const headerContainer = document.getElementById("header")
+menuButton.addEventListener("click", () =>{
+	headerContainer.classList.toggle("open")
+
+	const homeLink = document.createElement('a')
+	homeLink.textContent = 'Home';
+	headerContainer.appendChild(homeLink);
+	homeLink.className = 'links'
+
+	const aboutLink = document.createElement('a')
+	aboutLink.textContent = 'About';
+	headerContainer.appendChild(aboutLink);
+	aboutLink.className = 'links'
+
+	const blogLink = document.createElement('a')
+	blogLink.textContent = 'Blog';
+	headerContainer.appendChild(blogLink);
+	blogLink.className = 'links'
+})

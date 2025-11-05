@@ -18,6 +18,11 @@ header{
     padding: 0px 20px;
 }
 
+
+
+
+
+
 h1{
     color: white;
     font-weight: 800;
@@ -44,16 +49,16 @@ h1{
 }
 
 section{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex: 1;
     margin-top: 4rem;
+    margin-right: 20px;
     padding-bottom: 2rem;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .castillo{
     flex-basis: 500px;
+    flex-grow: 1;
     margin-top: 15px;
     border-bottom: 2px solid black;
 }
@@ -66,6 +71,7 @@ section{
 
 .piedra{
     flex-basis: 500px;
+    flex-grow: 1;
     margin-top: 15px;
     border-bottom: 2px solid black;
 }
@@ -81,13 +87,90 @@ section{
 
 main{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
+    margin: auto;
+    align-items: flex-start;
     max-width: 700px;
 }
+
 
 .castillo1, .piedra2{
 
    width: 100%;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 0px 20px;
+    align-items: flex-start;
+    margin-top: 4rem;
+    position: unset
+    
+}
+
+@media screen and (max-width: 400px){
+    main {
+       flex-direction: column-reverse;
+    }
+}
+
+
+@media screen and (max-width: 340px){
+    button#menu{
+       display: block;
+    }
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#menu{
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    display: none;
+    border-radius: 20px;
+    padding: 0px 20px;
+}
+
+#menu:hover{
+    background-color: rgb(189, 186, 186);
+}
+
+@media screen and (max-width: 340px){
+    .opciones{
+       
+       display: none;
+    
+    
+    }
+}
+
+@media screen and (max-width: 340px){
+    header.open{
+        flex-direction: column;
+        height: 100vh;
+        padding: 0px 1rem;
+       
+    }
+}
+
+.links{
+    display: none;
+
+
+}
+
+@media screen and (max-width: 340px){
+    header.links{
+        
+        
+       
+    }
 }
