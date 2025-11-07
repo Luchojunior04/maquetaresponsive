@@ -16,6 +16,8 @@ header{
     height: 50px;
     width: 100%;
     padding: 0px 20px;
+    position: fixed;
+    top: 0;
 }
 
 
@@ -145,10 +147,14 @@ aside{
 
 @media screen and (max-width: 340px){
     .opciones{
-       
-       display: none;
-    
-    
+       display: none;    
+    }
+
+    header.open .opciones {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
     }
 }
 
